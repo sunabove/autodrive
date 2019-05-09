@@ -5,5 +5,5 @@ from time import sleep
 camera = PiCamera()
 
 camera.start_preview()
-sleep(60)
+sleep(1200)
 camera.stop_preview()

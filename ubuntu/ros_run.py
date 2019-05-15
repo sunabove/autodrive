@@ -1,8 +1,9 @@
 #coding: utf-8
 
 import subprocess
+from time import sleep
 
-print( "Hello" )
+#print( "Hello" )
 
 #proc    -> name/id of the process
 #id = 1  -> search for pid
@@ -39,6 +40,11 @@ else :
     print( "running roscore" )
     import os
     os.system("roscore &")  
+
+    while not process_exists( "roscore" ) :
+        pass
+        sleep( "5" )
+    pass
 pass
 
-print( "Good bye!" )
+#print( "Good bye!" )
